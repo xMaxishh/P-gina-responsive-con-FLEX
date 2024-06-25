@@ -1,0 +1,438 @@
+:root {
+    /* Primary colors */
+    --color-nutmeg: hsl(14, 45%, 36%);
+    --color-dark-raspberry: hsl(332, 51%, 32%);
+
+    /* Neutral colors */
+    --color-white: hsl(0, 0%, 100%);
+    --color-rose-white: hsl(330, 100%, 98%);
+    --color-eggshell: hsl(30, 54%, 90%);
+    --color-light-grey: hsl(30, 18%, 87%);
+    --color-wenge-brown: hsl(30, 10%, 34%);
+    --color-dark-charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: 'Young-serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 100 900;
+    /* Rango de pesos de la fuente variable */
+    font-display: swap;
+    /* Opcional: para mejorar la carga de la fuente */
+}
+
+body {
+    background: var(--color-eggshell);
+    font-family: 'Outfit', sans-serif;
+    height: 100dvh;
+    margin: 0;
+}
+
+
+.container-img {
+    max-width: 100%;
+
+    img {
+        max-width: 100dvw;
+        display: block;
+        margin: auto;
+    }
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 25px;
+    padding-bottom: 10px;
+}
+
+.intro {
+
+    h1 {
+        color: var(--color-dark-charcoal);
+        font-size: 37px;
+        font-weight: 900;
+        font-family: 'young-serif';
+        padding: 0;
+        margin: 1px;
+    }
+
+    p {
+        font-size: 16px;
+        padding: 0;
+        color: var(--color-wenge-brown);
+        line-height: 1.5;
+        letter-spacing: .3px;
+    }
+}
+
+.time {
+    background: var(--color-rose-white);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    border-radius: 9px;
+    flex-direction: column;
+    margin: 25px;
+    margin-bottom: 0;
+
+    h3 {
+        color: var(--color-dark-raspberry);
+        text-align: left;
+        font-size: 19px;
+        padding: 20px 0 0 27px;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    ul {
+        color: var(--color-wenge-brown);
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 30px;
+        letter-spacing: .6px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        padding-inline: 10px;
+    }
+}
+
+.ingredients {
+    width: 100%;
+    padding: 30px;
+    padding-top: 0;
+
+    h2 {
+        color: var(--color-nutmeg);
+        font-family: 'young-serif';
+        font-weight: 700;
+    }
+
+    ul {
+        color: var(--color-wenge-brown);
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 30px;
+
+    }
+
+    ul li {
+        padding-inline: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+hr {
+
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: var(--color-light-grey);
+    margin: 10px auto;
+
+}
+
+.instructions {
+    width: 100%;
+    padding: 30px;
+    padding-top: 0;
+    color: var(--color-wenge-brown);
+
+    h2 {
+        color: var(--color-nutmeg);
+        font-family: 'young-serif';
+        font-weight: 700;
+    }
+
+    ol {
+        margin-left: 20px;
+        padding-left: 30px;
+    }
+
+    ol li {
+        padding-inline: 14px;
+        margin-bottom: 10px;
+    }
+
+    li::marker {
+        color: var(--color-nutmeg);
+        font-weight: 700;
+    }
+}
+
+.nutrition {
+    width: 100%;
+    display: flex;
+    color: var(--color-wenge-brown);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .nutrition-info {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: auto;
+
+
+    }
+
+    .nutrition-info {
+        width: 100%;
+    }
+
+    .nutrition-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        padding-inline: 30px;
+        padding-right: 45%;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nutrition-item:last-child {
+        border-bottom: none;
+    }
+
+    .label {
+        color: #000;
+        font-size: 16px;
+    }
+
+    .value {
+        font-size: 16px;
+        color: var(--color-nutmeg);
+        font-weight: 700;
+    }
+
+
+}
+
+.container {
+    width: 750px;
+    margin: 3rem auto;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        margin: auto;
+        padding: auto;
+    }
+}
+
+
+/* movil */
+
+@media (max-width: 600px) {
+
+    body {
+        width: 100%;
+        height: 100dvh;
+    }
+
+    .container {
+        width: 100dvw;
+        background: var(--color-white);
+        overflow-x: hidden;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container-img {
+        width: 100%;
+        margin: 0;
+
+        img {
+            width: 100%;
+            display: block;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px;
+        padding-bottom: 10px;
+    }
+
+    .intro {
+
+        h1 {
+            color: var(--color-dark-charcoal);
+            font-size: 37px;
+            font-weight: 900;
+            font-family: 'young-serif';
+            padding: 0;
+            margin: 1px;
+        }
+
+        p {
+            font-size: 16px;
+            padding: 0;
+            color: var(--color-wenge-brown);
+            line-height: 1.5;
+            letter-spacing: .3px;
+        }
+    }
+
+    .time {
+
+        background: var(--color-rose-white);
+        display: flex;
+        justify-content: center;
+        border-radius: 9px;
+        flex-direction: column;
+        width: auto;
+        margin: 25px;
+        margin-bottom: 0;
+
+        h3 {
+            color: var(--color-dark-raspberry);
+            text-align: left;
+            padding: 20px 0 0 27px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        ul {
+            color: var(--color-wenge-brown);
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 30px;
+            letter-spacing: .6px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-inline: 10px;
+        }
+    }
+
+    .ingredients {
+
+        padding: 50px;
+        padding-top: 0;
+        width: auto;
+
+        h2 {
+            color: var(--color-nutmeg);
+            font-family: 'young-serif';
+            font-weight: 700;
+        }
+
+        ul {
+            color: var(--color-wenge-brown);
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 30px;
+
+        }
+
+        ul li {
+            padding-inline: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    hr {
+        width: 80dvw;
+        border: none;
+        height: 1px;
+        background: var(--color-light-grey);
+        margin: 10px auto;
+
+    }
+
+    .instructions {
+        padding: 50px;
+        width: auto;
+        padding-top: 0;
+        color: var(--color-wenge-brown);
+
+        h2 {
+            color: var(--color-nutmeg);
+            font-family: 'young-serif';
+            font-weight: 700;
+        }
+
+        ol {
+            margin-left: 20px;
+            padding-left: 30px;
+        }
+
+        ol li {
+            padding-inline: 14px;
+            margin-bottom: 10px;
+        }
+
+        li::marker {
+            color: var(--color-nutmeg);
+            font-weight: 700;
+        }
+    }
+
+    .nutrition {
+
+        padding: 50px;
+        width: auto;
+        padding-top: 0;
+        color: var(--color-wenge-brown);
+
+        .nutrition-info {
+            display: flex;
+            width: 100%;
+            margin: 2px auto;
+
+        }
+
+        .nutrition-item {
+             justify-content: space-around;
+
+            padding: 15px;
+
+        }
+
+        h2 {
+            color: var(--color-nutmeg);
+            font-family: 'young-serif';
+            font-weight: 700;
+        }
+
+        .value {
+            color: var(--color-nutmeg);
+            font-weight: 700;
+        }
+    }
+
+}
